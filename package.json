@@ -1,10 +1,14 @@
 {
   "name": "scroll-tt",
-  "version": "0.1.3",
+  "version": "0.0.20b",
   "description": "[기깔나는사람들] React-scroll-to-top",
   "file": "ScrollToTop.jsx",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --mode development",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
@@ -15,6 +19,18 @@
     "scroll-to-top",
     "react"
   ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "author": "eunji",
   "license": "MIT",
   "bugs": {
@@ -23,5 +39,32 @@
   "homepage": "https://github.com/giggals-s-people/react-scroll-to-top#readme",
   "dependencies": {
     "commander": "^9.4.1"
-  }
+  },
+  "@babel/cli": "^7.19.3",
+  "@babel/plugin-proposal-nullish-coalescing-operator": "^7.18.6",
+  "@babel/preset-react": "^7.18.6",
+  "commander": "^9.4.1",
+  "react-app-rewire-babel-loader": "^0.1.1",
+  "react-app-rewired": "^2.2.1",
+  "react": "^17.0.2",
+  "react-dom": "^17.0.2",
+  "react-scripts": "5.0.0",
+  "devDependencies": {
+    "file-loader": "^6.2.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1",
+    "@babel/cli": "^7.10.5",
+    "@babel/preset-react": "^7.10.4"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "private": false,
+  "browser": "./browser/specific/main.js"
 }
